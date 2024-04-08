@@ -56,23 +56,23 @@ const BSMLGenRules = [
     ]),
     new Rule_1.Rule('link', [
         new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
-    ]),
-    new Rule_1.Rule('paragraph', [
-        new Pattern_1.Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
-    ]),
-    new Rule_1.Rule('bold', [
-        new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
-    ]),
-    new Rule_1.Rule('italic', [
-        new Pattern_1.Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
-        new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
-    ]),
-    new Rule_1.Rule('underline', [
-        new Pattern_1.Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
-    ]),
-    new Rule_1.Rule('strikethrough', [
-        new Pattern_1.Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
-    ]),
+    ])
+    //new Rule('paragraph', [
+    //  new Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
+    //]),
+    //new Rule('bold', [
+    //  new Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
+    //]),
+    //new Rule('italic', [
+    //  new Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
+    //  new Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
+    //]),
+    //new Rule('underline', [
+    //  new Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
+    //]),
+    //new Rule('strikethrough', [
+    //  new Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
+    //]),
 ];
 function processFile(content) {
     // Process the content and return it
