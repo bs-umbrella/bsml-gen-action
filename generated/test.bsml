@@ -32,7 +32,7 @@
             strikethrough
         </s>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <img src="My Red Text!" hover-hint="#ff0000"/>
+        <text color="#ff0000" text="My Red Text!"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="link" url="https://www.google.com" open-in-browser="true"/>
         <img src="https://xxx.png" hover-hint="image"/>
