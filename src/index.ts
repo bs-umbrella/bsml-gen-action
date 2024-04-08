@@ -49,10 +49,10 @@ const BSMLGenRules: Rule[] = [
         /\[([^\n]+)\]\(([^\n]+)\)/g,
         '<open-page-text url="$2" open-in-browser="true">$1</open-page-text>'
       ),
-    ]),
+    ])/*,
     new Rule('paragraph', [
       new Pattern(/([^\n]+\n?)/g, '\n<text font-size="4" text="$1"/>\n'),
-    ]),
+    ]),*/ 
   ];
 
 

@@ -5,14 +5,8 @@
 
 test 1
 
-- bullet 1
-- bullet 2
-* bullet 3
-* bullet 4
-
-1. one
-2. two
-3. three
+* bullet
+* bullet
 
 [link](https://www.google.com)
 ![image](https://xxx.png)
