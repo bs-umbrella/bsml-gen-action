@@ -1,0 +1,15 @@
+{
+  "name": "bsml-gen-action",
+  "version": "1.0.0",
+  "description": "Github Action to generate .bsml files from a folder of .md files.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.4.4"
+  }
+}

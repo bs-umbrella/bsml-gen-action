@@ -1,0 +1,15 @@
+name: 'BSML Gen'
+description: 'Generate .bsml files from a folder of .md files.'
+author: 'FutureMapper'
+inputs:
+  input-dir:
+    description: 'Directory to pull markdown files from'
+    required: true
+    default: './content/'
+  output-dir:
+    description: 'Directory to output bsml files to'
+    required: true
+    default: './generated/'
+runs:
+  using: 'node20'
+  main: 'index.js'
