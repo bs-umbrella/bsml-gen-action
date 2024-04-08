@@ -26,10 +26,14 @@
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text font-size="4" text="&lt;s&gt;strikethrough&lt;/s&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <text font-size="4" text="// This will be a seperate text object, not inline!"/>
         <open-page-text text="color=&quot;#ff0000&quot;" url="My Red Text!" open-in-browser="true"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <open-page-text text="My Other BSML" url="/" open-in-browser="true"/>
+        <text font-size="4" text="// Links prefixed with ~ will be open new bsml pages."/>
+        <open-page-text text="My Other BSML" url="/test2.bsml"/>
+        <text font-size="4" text="// Links with no prefix will be opened in browser (crossplatform)"/>
         <open-page-text text="Open Google :D" url="https://www.google.com" open-in-browser="true"/>
-        <img src="https://xxx.png" hover-hint="image"/>
+        <text font-size="4" text="// Links prefixed with ! will be turned into images with the text inside the square brackets being a alt-text/hover-hint"/>
+        <text font-size="4" text="![image](https:"/>
     </vertical>
 </bg>

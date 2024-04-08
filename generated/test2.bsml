@@ -1,35 +1,10 @@
 <bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
     <vertical>
-        <text font-size="8" text="Header 1"/>
-        <text font-size="7" text="Header 2"/>
-        <text font-size="6" text="Header 3"/>
-        <text font-size="5" text="Header 4"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor magna neque, at tristique nulla condimentum eu. In mi nunc, posuere nec nisi in, pulvinar pulvinar augue. Phasellus cursus augue in nibh rutrum volutpat. Ut vitae mollis lorem, sit amet pellentesque lacus. Curabitur interdum luctus imperdiet. Curabitur fringilla congue neque et pretium. Etiam maximus risus orci, nec malesuada elit auctor id. Aliquam fermentum odio luctus enim ornare maximus. Etiam imperdiet faucibus ipsum id euismod. Donec a efficitur elit. Maecenas et ligula sed lacus ornare cursus. In dapibus urna nec sem cursus mollis. Donec fermentum leo nec mattis malesuada. "/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text=":bullet list 1"/>
-        <text font-size="4" text=":bullet list 2"/>
-        <text font-size="4" text=":bullet list 3"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text=":indented list 1"/>
-        <text font-size="4" text=" :indented list 2"/>
-        <text font-size="4" text=" :indented list 3"/>
-        <text font-size="4" text=":indented list 4"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="TO &amp;lt;b&amp;gt;ESCAPE&amp;lt;/b&amp;gt;"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="&lt;b&gt;bold&lt;/b&gt;"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="&lt;i&gt;italic&lt;/i&gt;"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="&lt;u&gt;underline&lt;/u&gt;"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="&lt;s&gt;strikethrough&lt;/s&gt;"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <open-page-text text="color=&quot;#ff0000&quot;" url="My Red Text!" open-in-browser="true"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <open-page-text text="My Other BSML" url="https://raw.githubusercontent.com/bs-umbrella/bsml-gen-action/main/generated/test2.bsml" open-in-browser="true"/>
-        <open-page-text text="Open Google :D" url="https://www.google.com" open-in-browser="true"/>
-        <img src="https://xxx.png" hover-hint="image"/>
+        <text font-size="8" text="Hello!"/>
+        <text font-size="4" text=":This is my alternate page where I talk about random stuff :)"/>
+        <text font-size="4" text=" :Maybe some of that random stuff is cool"/>
+        <text font-size="4" text="  :Or maybe it&apos;s not cool who knows."/>
+        <text font-size="4" text=" :This page is just to test out some indented lists and how well they would look in game :D"/>
+        <text font-size="4" text="  :(Hopefully not too bad!) "/>
     </vertical>
 </bg>
