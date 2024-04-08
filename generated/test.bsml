@@ -1,12 +1,13 @@
-<text font-size="8" text="Header 1"/>
-<text font-size="7" text="Header 2"/>
-<text font-size="6" text="Header 3"/>
-<text font-size="5" text="Header 4"/>
-
-test 1
-
-* bullet
-* bullet
-
-<open-page-text url="https://www.google.com" open-in-browser="true">link</open-page-text>
-<img src="https://xxx.png" hover-hint="image" />
+<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+    <vertical>
+        <text font-size="8" text="Header 1"/>
+        <text font-size="7" text="Header 2"/>
+        <text font-size="6" text="Header 3"/>
+        <text font-size="5" text="Header 4"/>
+        <text font-size="4" text="test 1"/>
+        <text font-size="4" text="* bullet"/>
+        <text font-size="4" text="* bullet"/>
+        <open-page-text text="link" url="https://www.google.com" open-in-browser="true"/>
+        <img src="https://xxx.png" hover-hint="image"/>
+    </vertical>
+</bg>
