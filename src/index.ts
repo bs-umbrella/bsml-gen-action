@@ -59,7 +59,7 @@ const BSMLGenRules: Rule[] = [
       new Pattern(/^\n/gm, '<bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>'),
     ]),
     new Rule('color', [
-      new Pattern(/\[color="([^"]+)"\]\(([^)]+)\)/g, '<img src="$2" hover-hint="$1"/>'),
+      new Pattern(/\[color="([^"]+)"\]\(([^)]+)\)/g, '<text color="$1" text="$2"/>'),
     ]),
     new Rule('image', [
       new Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1"/>'),
