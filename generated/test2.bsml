@@ -28,7 +28,7 @@
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="color=&quot;#ff0000&quot;" url="My Red Text!" open-in-browser="true"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <open-page-text text="My Other BSML" url="/" open-in-browser="true"/>
+        <open-page-text text="My Other BSML" url="https://raw.githubusercontent.com/bs-umbrella/bsml-gen-action/main/generated/test2.bsml" open-in-browser="true"/>
         <open-page-text text="Open Google :D" url="https://www.google.com" open-in-browser="true"/>
         <img src="https://xxx.png" hover-hint="image"/>
     </vertical>
