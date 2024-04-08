@@ -68,7 +68,7 @@ const BSMLGenRules = [
         new Pattern_1.Pattern(/\~\[([^\]]+)\]\((\S+)\)/g, '<open-page-text text="$1" url="$2"/>')
     ]),
     new Rule_1.Rule('weblink', [
-        new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
+        new Pattern_1.Pattern(/(?<![\w\/\-!|~])\[[^\]]*\]\([^)]*\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
     ]),
     new Rule_1.Rule('paragraph', [
         new Pattern_1.Pattern(/^(?!<)^(.+)$/gm, '<text font-size="4" text="$1"/>'),

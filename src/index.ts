@@ -69,7 +69,7 @@ const BSMLGenRules: Rule[] = [
     ]),
     new Rule('weblink', [
       new Pattern(
-        /\[([^\n]+)\]\(([^\n]+)\)/g,
+        /(?<![\w\/\-!|~])\[[^\]]*\]\([^)]*\)/g,
         '<open-page-text text="$1" url="$2" open-in-browser="true"/>'
       ),
     ]),
