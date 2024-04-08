@@ -4,9 +4,36 @@
         <text font-size="7" text="Header 2"/>
         <text font-size="6" text="Header 3"/>
         <text font-size="5" text="Header 4"/>
-        <text font-size="4" text="test 1"/>
-        <text font-size="4" text="* bullet"/>
-        <text font-size="4" text="* bullet"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor magna neque, at tristique nulla condimentum eu. In mi nunc, posuere nec nisi in, pulvinar pulvinar augue. Phasellus cursus augue in nibh rutrum volutpat. Ut vitae mollis lorem, sit amet pellentesque lacus. Curabitur interdum luctus imperdiet. Curabitur fringilla congue neque et pretium. Etiam maximus risus orci, nec malesuada elit auctor id. Aliquam fermentum odio luctus enim ornare maximus. Etiam imperdiet faucibus ipsum id euismod. Donec a efficitur elit. Maecenas et ligula sed lacus ornare cursus. In dapibus urna nec sem cursus mollis. Donec fermentum leo nec mattis malesuada.
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        :bullet list 1
+        <text font-size="4" text=":bullet list 2"/>
+        <text font-size="4" text=":bullet list 3"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        :indented list 1
+        <text font-size="4" text=" :indented list 2"/>
+        <text font-size="4" text=" :indented list 3"/>
+        <text font-size="4" text=":indented list 4"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <b>
+            bold
+        </b>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <i>
+            italic
+        </i>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <i>
+            _underline_
+        </i>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <s>
+            strikethrough
+        </s>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <img src="My Red Text!" hover-hint="#ff0000"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="link" url="https://www.google.com" open-in-browser="true"/>
         <img src="https://xxx.png" hover-hint="image"/>
     </vertical>
