@@ -49,10 +49,10 @@ const BSMLGenRules = [
     ]),
     new Rule_1.Rule('link', [
         new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text url="$2" open-in-browser="true">$1</open-page-text>'),
-    ]),
-    new Rule_1.Rule('paragraph', [
-        new Pattern_1.Pattern(/([^\n]+\n?)/g, '\n<text font-size="4" text="$1"/>\n'),
-    ]),
+    ]) /*,
+    new Rule('paragraph', [
+      new Pattern(/([^\n]+\n?)/g, '\n<text font-size="4" text="$1"/>\n'),
+    ]),*/
 ];
 function processFile(content) {
     // Process the content and return it
