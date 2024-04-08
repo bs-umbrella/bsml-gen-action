@@ -78,6 +78,8 @@ fs_1.default.readdir(inputDir, (err, files) => {
                 }
                 const processedContent = processFile(content);
                 const outputFilename = path_1.default.join(outputDir, path_1.default.basename(file, '.md') + '.bsml');
+                console.log(`Writing to ${outputFilename}...`);
+                console.log(processedContent);
                 fs_1.default.writeFile(outputFilename, processedContent, err => {
                     if (err) {
                         console.error(`Error writing file: ${err}`);
