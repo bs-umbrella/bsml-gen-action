@@ -56,10 +56,10 @@ const BSMLGenRules = [
     ]),
     new Rule_1.Rule('link', [
         new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
-    ])
-    //new Rule('paragraph', [
-    //  new Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
-    //]),
+    ]),
+    new Rule_1.Rule('paragraph', [
+        new Pattern_1.Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
+    ]),
     //new Rule('bold', [
     //  new Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
     //]),
