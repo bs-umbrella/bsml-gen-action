@@ -1,0 +1,12 @@
+name: Check action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-my-action:
+    name: Checks if this action works
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
