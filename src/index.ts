@@ -42,19 +42,6 @@ const BSMLGenRules: Rule[] = [
       new Pattern(/\   - \s?([^\n]+)/g, '      :$1'),
       new Pattern(/\    - \s?([^\n]+)/g, '        :$1'),
     ]),
-    new Rule('bold', [
-      new Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
-    ]),
-    new Rule('italic', [
-      new Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
-      new Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
-    ]),
-    new Rule('underline', [
-      new Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
-    ]),
-    new Rule('strikethrough', [
-      new Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
-    ]),
     new Rule('add-space', [
       new Pattern(/^\n/gm, '<bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>'),
     ]),
@@ -72,6 +59,19 @@ const BSMLGenRules: Rule[] = [
     ]),
     new Rule('paragraph', [
       new Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
+    ]),
+    new Rule('bold', [
+      new Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
+    ]),
+    new Rule('italic', [
+      new Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
+      new Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
+    ]),
+    new Rule('underline', [
+      new Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
+    ]),
+    new Rule('strikethrough', [
+      new Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
     ]),
   ];
 

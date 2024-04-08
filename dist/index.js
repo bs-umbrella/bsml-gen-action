@@ -45,19 +45,6 @@ const BSMLGenRules = [
         new Pattern_1.Pattern(/\   - \s?([^\n]+)/g, '      :$1'),
         new Pattern_1.Pattern(/\    - \s?([^\n]+)/g, '        :$1'),
     ]),
-    new Rule_1.Rule('bold', [
-        new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
-    ]),
-    new Rule_1.Rule('italic', [
-        new Pattern_1.Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
-        new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
-    ]),
-    new Rule_1.Rule('underline', [
-        new Pattern_1.Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
-    ]),
-    new Rule_1.Rule('strikethrough', [
-        new Pattern_1.Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
-    ]),
     new Rule_1.Rule('add-space', [
         new Pattern_1.Pattern(/^\n/gm, '<bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>'),
     ]),
@@ -72,6 +59,19 @@ const BSMLGenRules = [
     ]),
     new Rule_1.Rule('paragraph', [
         new Pattern_1.Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
+    ]),
+    new Rule_1.Rule('bold', [
+        new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
+    ]),
+    new Rule_1.Rule('italic', [
+        new Pattern_1.Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
+        new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
+    ]),
+    new Rule_1.Rule('underline', [
+        new Pattern_1.Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
+    ]),
+    new Rule_1.Rule('strikethrough', [
+        new Pattern_1.Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
     ]),
 ];
 function processFile(content) {
