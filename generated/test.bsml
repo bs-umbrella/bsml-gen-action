@@ -7,30 +7,17 @@
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor magna neque, at tristique nulla condimentum eu. In mi nunc, posuere nec nisi in, pulvinar pulvinar augue. Phasellus cursus augue in nibh rutrum volutpat. Ut vitae mollis lorem, sit amet pellentesque lacus. Curabitur interdum luctus imperdiet. Curabitur fringilla congue neque et pretium. Etiam maximus risus orci, nec malesuada elit auctor id. Aliquam fermentum odio luctus enim ornare maximus. Etiam imperdiet faucibus ipsum id euismod. Donec a efficitur elit. Maecenas et ligula sed lacus ornare cursus. In dapibus urna nec sem cursus mollis. Donec fermentum leo nec mattis malesuada.
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        :bullet list 1
-        <text font-size="4" text=":bullet list 2"/>
-        <text font-size="4" text=":bullet list 3"/>
+        :bullet list 1:bullet list 2:bullet list 3
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        :indented list 1
-        <text font-size="4" text=" :indented list 2"/>
-        <text font-size="4" text=" :indented list 3"/>
-        <text font-size="4" text=":indented list 4"/>
+        :indented list 1 :indented list 2 :indented list 3:indented list 4
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <b>
-            bold
-        </b>
+        **bold**
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <i>
-            italic
-        </i>
+        *italic*
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <i>
-            _underline_
-        </i>
+        __underline__
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <s>
-            strikethrough
-        </s>
+        --strikethrough--
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text color="#ff0000" text="My Red Text!"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
