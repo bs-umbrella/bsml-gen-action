@@ -98,8 +98,8 @@ fs.readdir(inputDir, (err, files) => {
 
                 let processedContent = processFile(content);
                 processedContent = removeNewLines(processedContent);
-                processedContent = formatXML(processedContent);
                 processedContent = wrapBSML(processedContent);
+                processedContent = formatXML(processedContent);
 
                 const outputFilename = path.join(outputDir, path.basename(file, '.md') + '.bsml');
 

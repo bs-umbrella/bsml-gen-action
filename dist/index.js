@@ -88,8 +88,8 @@ fs_1.default.readdir(inputDir, (err, files) => {
                 }
                 let processedContent = processFile(content);
                 processedContent = removeNewLines(processedContent);
-                processedContent = formatXML(processedContent);
                 processedContent = wrapBSML(processedContent);
+                processedContent = formatXML(processedContent);
                 const outputFilename = path_1.default.join(outputDir, path_1.default.basename(file, '.md') + '.bsml');
                 console.log(`Writing to ${outputFilename}...`);
                 console.log(processedContent);
