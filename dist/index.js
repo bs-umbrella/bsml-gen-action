@@ -31,6 +31,13 @@ test 1
 ![image](https://xxx.png)
 */
 const BSMLGenRules = [
+    new Rule_1.Rule('escape', [
+        new Pattern_1.Pattern(/(<)/g, '&lt;'),
+        new Pattern_1.Pattern(/(>)/g, '&gt;'),
+        new Pattern_1.Pattern(/(&)/g, '&amp;'),
+        new Pattern_1.Pattern(/(')/g, '&apos;'),
+        new Pattern_1.Pattern(/(")/g, '&quot;'),
+    ]),
     new Rule_1.Rule('header', [
         new Pattern_1.Pattern(/^#{4}\s?([^\n]+)/gm, '<text font-size="5" text="$1"/>'),
         new Pattern_1.Pattern(/^#{3}\s?([^\n]+)/gm, '<text font-size="6" text="$1"/>'),
@@ -54,24 +61,27 @@ const BSMLGenRules = [
     new Rule_1.Rule('image', [
         new Pattern_1.Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1"/>'),
     ]),
-    new Rule_1.Rule('link', [
+    new Rule_1.Rule('bsml-link', [
+        new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+bsml)\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
+    ]),
+    new Rule_1.Rule('weblink', [
         new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
     ]),
     new Rule_1.Rule('paragraph', [
         new Pattern_1.Pattern(/^(?!<)^(.+)$/gm, '<text font-size="4" text="$1"/>'),
     ]),
     new Rule_1.Rule('bold', [
-        new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
+        new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '&lt;b&gt;$1&lt;/b&gt;'),
     ]),
     new Rule_1.Rule('underline', [
-        new Pattern_1.Pattern(/\_\_\s?([^\n]+)\_\_/g, '<u>$1</u>'),
+        new Pattern_1.Pattern(/\_\_\s?([^\n]+)\_\_/g, '&lt;u&gt;$1&lt;/u&gt;'),
     ]),
     new Rule_1.Rule('italic', [
-        new Pattern_1.Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
-        new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
+        new Pattern_1.Pattern(/\*\s?([^\n]+)\*/g, '&lt;i&gt;$1&lt;/i&gt;'),
+        new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '&lt;i&gt;$1&lt;/i&gt;'),
     ]),
     new Rule_1.Rule('strikethrough', [
-        new Pattern_1.Pattern(/\-\-\s?([^\n]+)\-\-/g, '<s>$1</s>'),
+        new Pattern_1.Pattern(/\-\-\s?([^\n]+)\-\-/g, '&lt;s&gt;$1&lt;/s&gt;'),
     ]),
 ];
 function processFile(content) {

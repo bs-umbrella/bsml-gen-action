@@ -26,6 +26,6 @@ __underline__
 
 [color="#ff0000"](My Red Text!)
 
-[My Other BSML](/)
+[My Other BSML](https://raw.githubusercontent.com/bs-umbrella/bsml-gen-action/main/generated/test2.bsml)
 [Open Google :D](https://www.google.com)
 ![image](https://xxx.png)
