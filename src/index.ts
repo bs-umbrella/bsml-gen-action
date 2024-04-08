@@ -73,6 +73,10 @@ function formatXML(content: string): string {
     return xmlFormat(content);
 }
 
+function wrapBSML(content: string): string {
+    return "<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'><vertical>" + content + "</vertical></document>";
+}
+
 const inputDir = getInput('input-dir');
 const outputDir = getInput('output-dir');
 
@@ -95,6 +99,7 @@ fs.readdir(inputDir, (err, files) => {
                 let processedContent = processFile(content);
                 processedContent = removeNewLines(processedContent);
                 processedContent = formatXML(processedContent);
+                processedContent = wrapBSML(processedContent);
 
                 const outputFilename = path.join(outputDir, path.basename(file, '.md') + '.bsml');
 

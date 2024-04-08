@@ -68,6 +68,9 @@ function removeNewLines(content) {
 function formatXML(content) {
     return (0, xml_formatter_1.default)(content);
 }
+function wrapBSML(content) {
+    return "<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'><vertical>" + content + "</vertical></document>";
+}
 const inputDir = (0, core_1.getInput)('input-dir');
 const outputDir = (0, core_1.getInput)('output-dir');
 console.log(`Starting workflow... exporting to ${inputDir}!`);
@@ -86,6 +89,7 @@ fs_1.default.readdir(inputDir, (err, files) => {
                 let processedContent = processFile(content);
                 processedContent = removeNewLines(processedContent);
                 processedContent = formatXML(processedContent);
+                processedContent = wrapBSML(processedContent);
                 const outputFilename = path_1.default.join(outputDir, path_1.default.basename(file, '.md') + '.bsml');
                 console.log(`Writing to ${outputFilename}...`);
                 console.log(processedContent);
