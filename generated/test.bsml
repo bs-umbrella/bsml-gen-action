@@ -16,13 +16,13 @@
         <text font-size="4" text=" :indented list 3"/>
         <text font-size="4" text=":indented list 4"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="**bold**"/>
+        <text font-size="4" text="<b>bold</b>"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="*italic*"/>
+        <text font-size="4" text="<i>italic</i>"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="__underline__"/>
+        <text font-size="4" text="<u>underline</u>"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="--strikethrough--"/>
+        <text font-size="4" text="<s>strikethrough</s>"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text color="#ff0000" text="My Red Text!"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
