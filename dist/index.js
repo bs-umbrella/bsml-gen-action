@@ -1,2 +1,89 @@
 "use strict";
-console.log('Hello World!');
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@actions/core");
+const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
+const Rule_1 = require("./Rule");
+const Pattern_1 = require("./Pattern");
+/* EXAMPLE:
+
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+
+test 1
+
+- bullet 1
+- bullet 2
+* bullet 3
+* bullet 4
+
+1. one
+2. two
+3. three
+
+[link](https://www.google.com)
+![image](https://xxx.png)
+*/
+const BSMLGenRules = [
+    new Rule_1.Rule('header', [
+        new Pattern_1.Pattern(/^#{4}\s?([^\n]+)/gm, '<text font-size="5" text="$1"/>'),
+        new Pattern_1.Pattern(/^#{3}\s?([^\n]+)/gm, '<text font-size="6" text="$1"/>'),
+        new Pattern_1.Pattern(/^#{2}\s?([^\n]+)/gm, '<text font-size="7" text="$1"/>'),
+        new Pattern_1.Pattern(/^#{1}\s?([^\n]+)/gm, '<text font-size="8" text="$1"/>'),
+    ]),
+    new Rule_1.Rule('bold', [
+        new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '<b>$1</b>'),
+        new Pattern_1.Pattern(/\_\_\s?([^\n]+)\_\_/g, '<b>$1</b>'),
+    ]),
+    new Rule_1.Rule('italic', [
+        new Pattern_1.Pattern(/\*\s?([^\n]+)\*/g, '<i>$1</i>'),
+        new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
+    ]),
+    new Rule_1.Rule('image', [
+        new Pattern_1.Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1" />'),
+    ]),
+    new Rule_1.Rule('link', [
+        new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text url="$2" open-in-browser="true">$1</open-page-text>'),
+    ]),
+    new Rule_1.Rule('paragraph', [
+        new Pattern_1.Pattern(/([^\n]+\n?)/g, '\n<text font-size="4" text="$1"/>\n'),
+    ]),
+];
+function processFile(content) {
+    // Process the content and return it
+    BSMLGenRules.forEach(rule => {
+        content = rule.apply(content);
+    });
+    return content;
+}
+const inputDir = (0, core_1.getInput)('input-dir');
+const outputDir = (0, core_1.getInput)('output-dir');
+console.log(`Starting workflow... exporting to ${inputDir}!`);
+fs_1.default.readdir(inputDir, (err, files) => {
+    if (err) {
+        console.error(`Error reading directory: ${err}`);
+        return;
+    }
+    files.forEach(file => {
+        if (path_1.default.extname(file) === '.md') {
+            fs_1.default.readFile(path_1.default.join(inputDir, file), 'utf8', (err, content) => {
+                if (err) {
+                    console.error(`Error reading file: ${err}`);
+                    return;
+                }
+                const processedContent = processFile(content);
+                const outputFilename = path_1.default.join(outputDir, path_1.default.basename(file, '.md') + '.bsml');
+                fs_1.default.writeFile(outputFilename, processedContent, err => {
+                    if (err) {
+                        console.error(`Error writing file: ${err}`);
+                    }
+                });
+            });
+        }
+    });
+});
