@@ -35,6 +35,9 @@ const BSMLGenRules: Rule[] = [
       new Pattern(/(')/g, '&apos;'),
       new Pattern(/(")/g, '&quot;'),
     ]),
+    new Rule('comments', [
+      new Pattern(/\/\/.*$/g, '')
+    ]),
     new Rule('header', [
       new Pattern(/^#{4}\s?([^\n]+)/gm, '<text font-size="5" text="$1"/>'),
       new Pattern(/^#{3}\s?([^\n]+)/gm, '<text font-size="6" text="$1"/>'),
@@ -60,9 +63,9 @@ const BSMLGenRules: Rule[] = [
     ]),
     new Rule('bsml-link', [
       new Pattern(
-        /\[([^\n]+)\]\(([^\n]+bsml)\)/g,
-        '<open-page-text text="$1" url="$2" open-in-browser="true"/>'
-      ),
+        /\~\[([^\]]+)\]\((\S+)\)/g,
+        '<open-page-text text="$1" url="$2"/>'
+      )
     ]),
     new Rule('weblink', [
       new Pattern(

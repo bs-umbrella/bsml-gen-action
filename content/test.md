@@ -24,8 +24,12 @@ __underline__
 
 --strikethrough--
 
+// This will be a seperate text object, not inline!
 [color="#ff0000"](My Red Text!)
 
-[My Other BSML](/)
+// Links prefixed with ~ will be open new bsml pages.
+~[My Other BSML](/test2.bsml)
+// Links with no prefix will be opened in browser (crossplatform)
 [Open Google :D](https://www.google.com)
+// Links prefixed with ! will be turned into images with the text inside the square brackets being a alt-text/hover-hint
 ![image](https://xxx.png)
