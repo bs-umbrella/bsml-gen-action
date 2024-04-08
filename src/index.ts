@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { Rule } from './Rule';
 import { Pattern } from './Pattern';
+import xmlFormat from 'xml-formatter';
 
 /* EXAMPLE:
 
@@ -42,17 +43,17 @@ const BSMLGenRules: Rule[] = [
       new Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
     ]),
     new Rule('image', [
-      new Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1" />'),
+      new Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1"/>'),
     ]),
     new Rule('link', [
       new Pattern(
         /\[([^\n]+)\]\(([^\n]+)\)/g,
-        '<open-page-text url="$2" open-in-browser="true">$1</open-page-text>'
+        '<open-page-text text="$1" url="$2" open-in-browser="true"/>'
       ),
-    ])/*,
+    ]),
     new Rule('paragraph', [
-      new Pattern(/([^\n]+\n?)/g, '\n<text font-size="4" text="$1"/>\n'),
-    ]),*/ 
+      new Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
+    ]),
   ];
 
 
@@ -62,6 +63,14 @@ function processFile(content: string): string {
         content = rule.apply(content);
     });
     return content;
+}
+
+function removeNewLines(content: string): string {
+    return content.replace(/\n/g, '');
+}
+
+function formatXML(content: string): string {
+    return xmlFormat(content);
 }
 
 const inputDir = getInput('input-dir');
@@ -83,7 +92,10 @@ fs.readdir(inputDir, (err, files) => {
                     return;
                 }
 
-                const processedContent = processFile(content);
+                let processedContent = processFile(content);
+                processedContent = removeNewLines(processedContent);
+                processedContent = formatXML(processedContent);
+
                 const outputFilename = path.join(outputDir, path.basename(file, '.md') + '.bsml');
 
                 console.log(`Writing to ${outputFilename}...`);

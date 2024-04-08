@@ -8,6 +8,7 @@ const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const Rule_1 = require("./Rule");
 const Pattern_1 = require("./Pattern");
+const xml_formatter_1 = __importDefault(require("xml-formatter"));
 /* EXAMPLE:
 
 # Header 1
@@ -45,14 +46,14 @@ const BSMLGenRules = [
         new Pattern_1.Pattern(/\_\s?([^\n]+)\_/g, '<i>$1</i>'),
     ]),
     new Rule_1.Rule('image', [
-        new Pattern_1.Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1" />'),
+        new Pattern_1.Pattern(/\!\[([^\]]+)\]\((\S+)\)/g, '<img src="$2" hover-hint="$1"/>'),
     ]),
     new Rule_1.Rule('link', [
-        new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text url="$2" open-in-browser="true">$1</open-page-text>'),
-    ]) /*,
-    new Rule('paragraph', [
-      new Pattern(/([^\n]+\n?)/g, '\n<text font-size="4" text="$1"/>\n'),
-    ]),*/
+        new Pattern_1.Pattern(/\[([^\n]+)\]\(([^\n]+)\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
+    ]),
+    new Rule_1.Rule('paragraph', [
+        new Pattern_1.Pattern(/^(?!<)([^\n]+\n)/gm, '\n<text font-size="4" text="$1"/>\n'),
+    ]),
 ];
 function processFile(content) {
     // Process the content and return it
@@ -60,6 +61,12 @@ function processFile(content) {
         content = rule.apply(content);
     });
     return content;
+}
+function removeNewLines(content) {
+    return content.replace(/\n/g, '');
+}
+function formatXML(content) {
+    return (0, xml_formatter_1.default)(content);
 }
 const inputDir = (0, core_1.getInput)('input-dir');
 const outputDir = (0, core_1.getInput)('output-dir');
@@ -76,7 +83,9 @@ fs_1.default.readdir(inputDir, (err, files) => {
                     console.error(`Error reading file: ${err}`);
                     return;
                 }
-                const processedContent = processFile(content);
+                let processedContent = processFile(content);
+                processedContent = removeNewLines(processedContent);
+                processedContent = formatXML(processedContent);
                 const outputFilename = path_1.default.join(outputDir, path_1.default.basename(file, '.md') + '.bsml');
                 console.log(`Writing to ${outputFilename}...`);
                 console.log(processedContent);
