@@ -27,12 +27,17 @@
         <text font-size="4" text="&lt;s&gt;strikethrough&lt;/s&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="color=&quot;#ff0000&quot;" url="My Red Text!" open-in-browser="true"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="My Other BSML" url="/test2.bsml"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text font-size="4" text="[Open Google :D](https:"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
+        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text font-size="4" text="![image](https:"/>
     </vertical>
