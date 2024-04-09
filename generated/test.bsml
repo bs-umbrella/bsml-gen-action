@@ -26,14 +26,10 @@
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text font-size="4" text="&lt;s&gt;strikethrough&lt;/s&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="$1" url="$2" open-in-browser="true"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="My Other BSML" url="/test2.bsml"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="$1" url="$2" open-in-browser="true"/>
-        <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <img src="https://xxx.png" hover-hint="image"/>
     </vertical>
 </bg>
