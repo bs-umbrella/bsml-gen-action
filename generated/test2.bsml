@@ -1,10 +1,6 @@
 <bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
     <vertical>
         <text font-size="8" text="Hello!"/>
-        <text font-size="4" text=":This is my alternate page where I talk about random stuff :)"/>
-        <text font-size="4" text=" :Maybe some of that random stuff is cool"/>
-        <text font-size="4" text="  :Or maybe it&apos;s not cool who knows."/>
-        <text font-size="4" text=" :This page is just to test out some indented lists and how well they would look in game :D"/>
-        <text font-size="4" text="  :(Hopefully not too bad!) "/>
+        :This is my alternate page where I talk about random stuff :) :Maybe some of that random stuff is cool  :Or maybe it&apos;s not cool who knows. :This page is just to test out some indented lists and how well they would look in game :D  :(Hopefully not too bad!)
     </vertical>
 </bg>
