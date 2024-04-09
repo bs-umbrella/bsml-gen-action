@@ -5,21 +5,26 @@
         <text font-size="6" text="Header 3"/>
         <text font-size="5" text="Header 4"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor magna neque, at tristique nulla condimentum eu. In mi nunc, posuere nec nisi in, pulvinar pulvinar augue. Phasellus cursus augue in nibh rutrum volutpat. Ut vitae mollis lorem, sit amet pellentesque lacus. Curabitur interdum luctus imperdiet. Curabitur fringilla congue neque et pretium. Etiam maximus risus orci, nec malesuada elit auctor id. Aliquam fermentum odio luctus enim ornare maximus. Etiam imperdiet faucibus ipsum id euismod. Donec a efficitur elit. Maecenas et ligula sed lacus ornare cursus. In dapibus urna nec sem cursus mollis. Donec fermentum leo nec mattis malesuada.
+        <text font-size="4" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor magna neque, at tristique nulla condimentum eu. In mi nunc, posuere nec nisi in, pulvinar pulvinar augue. Phasellus cursus augue in nibh rutrum volutpat. Ut vitae mollis lorem, sit amet pellentesque lacus. Curabitur interdum luctus imperdiet. Curabitur fringilla congue neque et pretium. Etiam maximus risus orci, nec malesuada elit auctor id. Aliquam fermentum odio luctus enim ornare maximus. Etiam imperdiet faucibus ipsum id euismod. Donec a efficitur elit. Maecenas et ligula sed lacus ornare cursus. In dapibus urna nec sem cursus mollis. Donec fermentum leo nec mattis malesuada. "/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        :bullet list 1:bullet list 2:bullet list 3
+        <text font-size="4" text=":bullet list 1"/>
+        <text font-size="4" text=":bullet list 2"/>
+        <text font-size="4" text=":bullet list 3"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        :indented list 1 :indented list 2 :indented list 3:indented list 4
+        <text font-size="4" text=":indented list 1"/>
+        <text font-size="4" text=" :indented list 2"/>
+        <text font-size="4" text=" :indented list 3"/>
+        <text font-size="4" text=":indented list 4"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        TO &amp;lt;b&amp;gt;ESCAPE&amp;lt;/b&amp;gt;
+        <text font-size="4" text="TO &amp;lt;b&amp;gt;ESCAPE&amp;lt;/b&amp;gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        &lt;b&gt;bold&lt;/b&gt;
+        <text font-size="4" text="&lt;b&gt;bold&lt;/b&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        &lt;i&gt;italic&lt;/i&gt;
+        <text font-size="4" text="&lt;i&gt;italic&lt;/i&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        &lt;u&gt;underline&lt;/u&gt;
+        <text font-size="4" text="&lt;u&gt;underline&lt;/u&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        &lt;s&gt;strikethrough&lt;/s&gt;
+        <text font-size="4" text="&lt;s&gt;strikethrough&lt;/s&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="$1" url="$2" open-in-browser="true"/>
@@ -27,8 +32,8 @@
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <open-page-text text="My Other BSML" url="/test2.bsml"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        [Open Google :D](https:
+        <open-page-text text="$1" url="$2" open-in-browser="true"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        ![image](https:
+        <img src="https://xxx.png" hover-hint="image"/>
     </vertical>
 </bg>
