@@ -29,9 +29,9 @@ test 1
 
 const BSMLGenRules: Rule[] = [
     new Rule('escape', [
+      new Pattern(/(&)/g, '&amp;'),
       new Pattern(/(<)/g, '&lt;'),
       new Pattern(/(>)/g, '&gt;'),
-      new Pattern(/(&)/g, '&amp;'),
       new Pattern(/(')/g, '&apos;'),
       new Pattern(/(")/g, '&quot;'),
     ]),

@@ -32,9 +32,9 @@ test 1
 */
 const BSMLGenRules = [
     new Rule_1.Rule('escape', [
+        new Pattern_1.Pattern(/(&)/g, '&amp;'),
         new Pattern_1.Pattern(/(<)/g, '&lt;'),
         new Pattern_1.Pattern(/(>)/g, '&gt;'),
-        new Pattern_1.Pattern(/(&)/g, '&amp;'),
         new Pattern_1.Pattern(/(')/g, '&apos;'),
         new Pattern_1.Pattern(/(")/g, '&quot;'),
     ]),
