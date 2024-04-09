@@ -16,7 +16,7 @@
         <text font-size="4" text=" :indented list 3"/>
         <text font-size="4" text=":indented list 4"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
-        <text font-size="4" text="TO &amp;lt;b&amp;gt;ESCAPE&amp;lt;/b&amp;gt;"/>
+        <text font-size="4" text="TO &lt;b&gt;ESCAPE&lt;/b&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
         <text font-size="4" text="&lt;b&gt;bold&lt;/b&gt;"/>
         <bg bg="panel-top" pref-height="5" bg-alpha="0" bg-color="00000000"/>
