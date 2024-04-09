@@ -70,9 +70,9 @@ const BSMLGenRules = [
     new Rule_1.Rule('weblink', [
         new Pattern_1.Pattern(/(?<![\w\/\-!|~])\[[^\]]*\]\([^)]*\)/g, '<open-page-text text="$1" url="$2" open-in-browser="true"/>'),
     ]),
-    new Rule_1.Rule('paragraph', [
-        new Pattern_1.Pattern(/^(?!<)^(.+)$/gm, '<text font-size="4" text="$1"/>'),
-    ]),
+    /*new Rule('paragraph', [
+      new Pattern(/^(?!<)^(.+)$/gm, '<text font-size="4" text="$1"/>'),
+    ]),*/
     new Rule_1.Rule('bold', [
         new Pattern_1.Pattern(/\*\*\s?([^\n]+)\*\*/g, '&lt;b&gt;$1&lt;/b&gt;'),
     ]),
