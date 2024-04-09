@@ -39,7 +39,7 @@ const BSMLGenRules = [
         new Pattern_1.Pattern(/(")/g, '&quot;'),
     ]),
     new Rule_1.Rule('comments', [
-        new Pattern_1.Pattern(/(?<!:)\/\/.*/gm, '')
+        new Pattern_1.Pattern(/\n(?<!:)\/\/.*/gm, '')
     ]),
     new Rule_1.Rule('header', [
         new Pattern_1.Pattern(/^#{4}\s?([^\n]+)/gm, '<text font-size="5" text="$1"/>'),

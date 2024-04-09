@@ -36,7 +36,7 @@ const BSMLGenRules: Rule[] = [
       new Pattern(/(")/g, '&quot;'),
     ]),
     new Rule('comments', [
-      new Pattern(/(?<!:)\/\/.*/gm, '')
+      new Pattern(/\n(?<!:)\/\/.*/gm, '')
     ]),
     new Rule('header', [
       new Pattern(/^#{4}\s?([^\n]+)/gm, '<text font-size="5" text="$1"/>'),
