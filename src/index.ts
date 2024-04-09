@@ -36,7 +36,7 @@ const BSMLGenRules: Rule[] = [
       new Pattern(/(")/g, '&quot;'),
     ]),
     new Rule('comments', [
-      new Pattern(/\/\/.*$/gm, '')
+      new Pattern(/(?<!:)\/\/.*/gm, '')
     ]),
     new Rule('header', [
       new Pattern(/^#{4}\s?([^\n]+)/gm, '<text font-size="5" text="$1"/>'),
@@ -73,9 +73,9 @@ const BSMLGenRules: Rule[] = [
         '<open-page-text text="$1" url="$2" open-in-browser="true"/>'
       ),
     ]),
-    /*new Rule('paragraph', [
+    new Rule('paragraph', [
       new Pattern(/^(?!<)^(.+)$/gm, '<text font-size="4" text="$1"/>'),
-    ]),*/
+    ]),
     new Rule('bold', [
       new Pattern(/\*\*\s?([^\n]+)\*\*/g, '&lt;b&gt;$1&lt;/b&gt;'),
     ]),
